@@ -1,0 +1,140 @@
+#include <stdio.h>
+
+void main(void) {
+	int n = 0;
+
+	scanf("%d", &n);
+
+	for (int i = 0; i < n; i++) {
+		if ((i + 1) % 4 == 0) {
+			printf("long ");
+		}
+	}
+
+	printf("int");
+
+
+}
+
+
+
+#include <stdio.h>
+int main(){
+
+	int T;
+	scanf("%d", &T);
+	
+	int a[1000000], b[1000000];
+	
+	for(int i = 0; i < T; i++){
+		scanf("%d %d", &a[i], &b[i]); 
+
+
+	}
+
+	printf("%d", T);
+	for(int i = 0; i < T; i++){
+		printf("%d", a[i]+b[i]);
+
+
+	}
+}
+
+#include <stdio.h>
+int main(){
+	int n;
+	scanf("%d", &n);
+
+	for(int i = 0; i < n; i++){
+		for(int j = 0; j <n-i-1; j++){
+			printf(" ");
+		}
+		for(int j = 0; j < i + 1; j++){
+			printf("*");
+		}
+		printf("\n");
+	} 
+
+}
+
+
+
+#include <stdio.h>
+int main(){
+	int a, b;
+	while(scanf("%d %d", &a, &b) != EOF){
+		printf("%d\n", a+b);
+	}
+
+
+}
+
+#include<stdio.h>
+int main(){
+
+	int num;
+	int student[30];
+	for(int i = 0; i < 30; i++){
+		student[i] = 0;
+	}
+	for(int i  = 0; i<28; i++){
+		scanf("%d", &num);
+		student[num-1] = 1;
+	}
+	for(int i = 0; i < 30; i++){
+		if(student[i] == 0){
+			printf("%d\n", i+1);
+		}
+	}
+}
+
+#include <stdio.h>
+int main(){
+	
+	int num;
+	int remain[42] = {0, };
+	int cnt = 0;
+	for (int i = 0; i < 10; i++){
+		scanf("%d", &num);
+		remain[num%42] = 1;
+	}
+	
+	for(int j = 0; j < 42; j++){
+		if(remain[j] != 0){
+			cnt++;
+		}	
+	}
+
+	printf("%d", cnt);
+
+}
+
+
+#include<stdio.h>
+int main(){
+	int n;
+	scanf("%d", &n);
+	
+	int score[n];
+	for(int i = 0; i < n; i++){
+		scanf("%d", &score[i]);
+	}
+	
+	int highest = score[0];
+	for(int i = 0; i < n-1; i++){
+		if( score[i] >= highest){
+			highest = score[i];
+		}
+	}
+		
+	float new[n];
+	float new_sum = 0;
+	float new_avg;
+	for(int j = 0; j < n; j++){
+		new[j] = ((float)score[j]/(float)highest)*100;
+		new_sum += new[j];
+	}
+	new_avg = new_sum/n;
+	printf("%f", new_avg);
+
+}
