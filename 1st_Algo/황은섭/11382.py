@@ -1,0 +1,1 @@
+print(sum(map(sum, [x for x in [map(int, input().split(' '))]])))
