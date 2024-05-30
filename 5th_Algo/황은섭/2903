@@ -1,0 +1,8 @@
+2903번.
+n = int(input())
+
+s = 2
+for i in range( n):
+  s = 2*s-1
+
+print(s**2)
