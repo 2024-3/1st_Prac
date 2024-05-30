@@ -1,0 +1,15 @@
+2563번. 
+n = int(input())
+papers = []
+
+for _ in range(n):                              #n만큼 종이 받기
+  x, y = map(int, input().split())              #x, y좌표로 저장
+  paper = [[a, b] for a in range(x, x +10) for b in range(y, y+10)]   #색종이 좌표 만들기
+  for coor in paper:
+    if coor not in papers:
+      papers.append(coor)                         #색종이 도화지에 그리기
+
+
+print(len(papers))                              #넓이 출력
+
+
