@@ -1,0 +1,15 @@
+11005번.
+import string
+
+N, B = map(int, input().split())
+st = ‘’
+
+dic = {x : x for x in range(10)}
+dic.update({i + 10 : x for i, x in enumerate(string.ascii_uppercase)}) #A:10~Z:35를 대응하는 dict 만들기
+
+while N != 0:
+  N, b = divmod(N, B)   #N을 B로 나눈다. 몫은 다음에 또 나누고 나머지는 첫자리로.
+  st = str(dic[b]) + st
+
+print(st)
+
